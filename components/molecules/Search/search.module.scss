@@ -1,0 +1,42 @@
+.searchForm {
+    margin: 2.5rem 0;
+}
+
+.input,
+.button {
+    padding: 1rem;
+    color: #213440;
+    border: 0.1rem solid #ccd6d9;
+    font-size: 1.8rem;
+}
+
+.button {
+    margin-left: 1rem;
+    margin-top: 1rem;
+    background: #ed1c24;
+    color: #ccd6d9;
+    border-color: #ed1c24;
+    cursor: pointer;
+
+    &:hover {
+        background: #940609;
+        border-color: #940609;
+    }
+}
+
+.label {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
+@media screen and (min-width: 768px) {
+    .button {
+        margin-top: 0;
+    }
+}

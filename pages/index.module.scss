@@ -1,0 +1,30 @@
+.h1 {
+    color: #ed1c24;
+    margin: 0;
+}
+
+.h2 {
+    color: #869da6;
+    margin: 1.5rem 0 0 0;
+}
+
+.index {
+    margin-top: 5rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.hint {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    margin: 1rem 0;
+}
+
+@media screen and (min-width: 768px) {
+    .index {
+        margin-top: 20rem;
+    }
+    .br {
+        display: none;
+    }
+}

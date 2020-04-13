@@ -1,0 +1,36 @@
+.resultsTable {
+    width: 100%;
+    color: #ccd6d9;
+
+    table {
+        min-height: 16.8rem;
+    }
+
+    table,
+    div {
+        margin: 0 auto;
+    }
+
+    div {
+        margin-top: 2rem;
+        font-size: 1.2rem;
+    }
+
+    button {
+        margin: 1rem 0.5rem;
+        cursor: pointer;
+        background: #213440;
+        color: #ccd6d9;
+        border: 0.1rem solid #ccd6d9;
+        padding: 0.5rem;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    a,
+    a:visited {
+        color: #ccd6d9;
+    }
+}
