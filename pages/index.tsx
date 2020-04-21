@@ -9,6 +9,7 @@ function Index() {
     const [searchQuery, setSearchQuery] = useState("");
     const [originalPokemons, setOriginalPokemons] = useState([]);
     const [pokemons, setPokemons] = useState([]);
+    const [currentPage, setCurrentPage] = useState(1);
 
     useEffect(() => {
         getOriginalPokemons().then((data) => {
@@ -27,6 +28,7 @@ function Index() {
     const filterPokemons = () => {
         if (!searchQuery) return;
         if (searchQuery === "all") return originalPokemons;
+        setCurrentPage(1);
         return originalPokemons.filter((p) => p.name.indexOf(searchQuery) > -1);
     };
 
@@ -50,6 +52,8 @@ function Index() {
                     pokemons={
                         pokemons && searchQuery ? pokemons : originalPokemons
                     }
+                    currentPage={currentPage}
+                    setCurrentPage={setCurrentPage}
                 />
             ) : null}
         </div>

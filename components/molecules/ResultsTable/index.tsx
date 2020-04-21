@@ -2,11 +2,15 @@ import { useState } from "react";
 import { IPokemons } from "../../../services/getPokemonService";
 import s from "./results-table.module.scss";
 
-export default function ResultsTable(props: { pokemons: IPokemons[] }) {
-    const { pokemons } = props;
+export default function ResultsTable(props: {
+    pokemons: IPokemons[];
+    currentPage: number;
+    setCurrentPage;
+}) {
+    const { pokemons, currentPage, setCurrentPage } = props;
+    console.log("rstable", pokemons);
     const resultsPerPage = 3;
     const maxPage = Math.ceil(pokemons.length / resultsPerPage);
-    const [currentPage, setCurrentPage] = useState(1);
 
     const getCurrentPageResults = () => {
         if (!pokemons.length) return [];
